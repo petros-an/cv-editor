@@ -1,10 +1,7 @@
-SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+SCRIPT_DIR=$(dirname "$(readlink -f "${BASH_SOURCE[0]:-$0}")")
+echo "Script dir: $SCRIPT_DIR"
 
 
-render_pdf() {
-    pandoc $1 -o output.html
-    weasyprint -s $2  output.html $3
-}
 
 ls $1 $2 | entr "$SCRIPT_DIR/render.sh" $1 $2 $3
 
