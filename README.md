@@ -1,4 +1,5 @@
 # HTML to PDF Live Renderer
+
 ## Dependencies (Ubuntu)
 
 ```Bash
@@ -15,4 +16,4 @@ To render once:
 
 To watch for changes and render:
 
-- `./watch-render.sh`
+- `./render_live.sh`
