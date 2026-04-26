@@ -1,3 +1,3 @@
-pandoc input.md -o output.html
-weasyprint -s style.css  output.html output.pdf
+pandoc $1 -o output.html
+weasyprint -s $2  output.html $3
 
